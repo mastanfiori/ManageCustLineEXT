@@ -1,0 +1,5 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns='sap.m'>
+	<!--  add your xml here -->
+	<Button id="extButton" text="Lot New" press=".extension.customer.ext.humanagedecision.ButtonController.onManage"></Button>
+</core:FragmentDefinition>

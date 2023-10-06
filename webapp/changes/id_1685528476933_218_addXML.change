@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1685528476933_218_addXML",
+	"fileType": "change",
+	"changeType": "addXML",
+	"moduleName": "customer/ext/humanagedecision/changes/fragments/Filters.fragment.xml",
+	"reference": "customer.ext.humanagedecision",
+	"packageName": "$TMP",
+	"content": {
+		"targetAggregation": "controlConfiguration",
+		"index": 10,
+		"fragmentPath": "fragments/Filters.fragment.xml"
+	},
+	"selector": {
+		"id": "i2d.qm.inspusgdsc.manages1::sap.suite.ui.generic.template.ListReport.view.ListReport::C_InspUsgDescMng--listReportFilter",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/i2d.qm.inspusgdsc.manages1/changes/",
+	"projectId": "customer.ext.humanagedecision",
+	"creation": "2023-05-31T10:21:17.325Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.84.35",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "addXML"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "",
+	"appDescriptorChange": false
+}

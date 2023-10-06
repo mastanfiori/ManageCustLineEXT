@@ -1,0 +1,25 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns='sap.m' xmlns:table="sap.ui.table" xmlns:smartTable="sap.ui.comp.smarttable">
+	<!--  add your xml here -->
+	
+	<table:Column id="CIColumn1" autoResizable="true" width="120px" tooltip="{i18n>Handling_unit}" sortProperty="Handling_unit">
+                    <!-- <table:customData>
+                        <core:CustomData key="p13nData" value='\{"columnKey": "Handling_unit", "leadingProperty": "Handling_unit"}' />
+                    </table:customData> -->
+                    <Label id="CILabel1" text="{i18n>Handling_unit}" />
+                    <table:template>
+                        <Text id="CIInput1"  text="{Handling_unit}"/>
+                    </table:template>
+                </table:Column>
+
+				<table:Column id="CIColumn2" autoResizable="true" width="120px" tooltip="{i18n>catch_weight}" sortProperty="catch_weight">
+                    <!-- <table:customData>
+                        <core:CustomData key="p13nData" value='\{"columnKey": "catch_weight", "leadingProperty": "catch_weight"}' />
+                    </table:customData> -->
+                    <Label id="CILabel2" text="{i18n>catch_weight}" />
+                    <table:template>
+                        <Text id="CIInput2"  text="{catch_weight}" />
+                    </table:template>
+                </table:Column>
+				
+</core:FragmentDefinition>

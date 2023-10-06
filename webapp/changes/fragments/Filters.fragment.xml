@@ -1,0 +1,9 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition xmlns:core='sap.ui.core' xmlns='sap.m' xmlns:smartFilterBar="sap.ui.comp.smartfilterbar">
+	<!--  add your xml here -->
+	<smartFilterBar:ControlConfiguration id="_IDEGen_controlconfiguration4" key="Handling_unit" index="100" label="{i18n>Handling_unit}" groupId="_BASIC"
+	width="300px" mandatory="notMandatory" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+	<smartFilterBar:ControlConfiguration id="_IDEGen_controlconfiguration5" key="catch_weight" index="101" label="{i18n>catch_weight}" groupId="_BASIC"
+	width="300px" mandatory="notMandatory" visibleInAdvancedArea="true"></smartFilterBar:ControlConfiguration>
+					
+</core:FragmentDefinition>

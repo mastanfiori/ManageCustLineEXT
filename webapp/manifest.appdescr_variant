@@ -1,0 +1,35 @@
+{
+  "fileName": "manifest",
+  "layer": "CUSTOMER_BASE",
+  "fileType": "appdescr_variant",
+  "reference": "i2d.qm.inspusgdsc.manages1",
+  "id": "customer.ext.humanagedecision",
+  "namespace": "apps/i2d.qm.inspusgdsc.manages1/appVariants/customer.ext.humanagedecision/",
+  "content": [
+    {
+      "changeType": "appdescr_app_setTitle",
+      "content": {},
+      "texts": {
+        "i18n": "i18n/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ListReport|C_InspUsgDescMng"
+      },
+      "texts": {
+        "i18n": "i18n/ListReport/C_InspUsgDescMng/i18n.properties"
+      }
+    },
+    {
+      "changeType": "appdescr_ui5_addNewModelEnhanceWith",
+      "content": {
+        "modelId": "i18n|sap.suite.ui.generic.template.ObjectPage|C_InspUsgDescMng"
+      },
+      "texts": {
+        "i18n": "i18n/ObjectPage/C_InspUsgDescMng/i18n.properties"
+      }
+    }
+  ]
+}

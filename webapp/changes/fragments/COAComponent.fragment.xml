@@ -1,0 +1,167 @@
+<!-- Use stable and unique IDs!-->
+<core:FragmentDefinition height="100%" xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:table="sap.ui.table" xmlns:u="sap.ui.unified" xmlns:uxap="sap.uxap">
+	<uxap:ObjectPageSection id="idOPSNewSection">
+		<uxap:subSections>
+			<uxap:ObjectPageSubSection id="idOPSSNewSection" title="{i18n>COA1}">
+				<uxap:blocks>
+					<VBox id="idVboxMain" fitContainer="true">
+						<Text id="idTextSection"/>
+						<smartTable:SmartTable id="IdNewSectionSmartTable" entitySet="ComponentCOASet" tableType="ResponsiveTable" useVariantManagement="true"
+							useTablePersonalisation="true" header="Records" showRowCount="true" enableAutoBinding="true" class="sapUiResponsiveContentPadding"
+							showFullScreenButton="true" placeToolbarInTable="true" tableBindingPath="Nav_To_COA" initiallyVisibleFields=""
+							ignoredFields="Is_Active_Entity,Draft_UUID,CHEM,COA,REQ">
+							<!--"SGF_Insp_Lot,SGF_Material,SGF_Material,SGF_Descr,SGF_Order,CHEM,COA" -->
+							<table:Table id="uitable" editable="false" enableColumnFreeze="true" selectionMode="None">
+								<table:columns>
+									<!--<table:Column id="SGF_Insp_Lot" autoResizable="true" width="150px" tooltip="{i18n>SGF_Insp_Lot}" sortProperty="SGF_Insp_Lot">-->
+									<!--	<Label id="SGF_Insp_Lotlabel" text="{i18n>SGF_Insp_Lot}"/>-->
+									<!--	<table:customData>-->
+									<!--		<core:CustomData id="SGF_Insp_Lotlabelcstom" key="p13nData"-->
+									<!--			value='\{"columnKey":"SGF_Insp_Lot","leadingProperty": "SGF_Insp_Lot", "sortProperty":"SGF_Insp_Lot"}'/>-->
+									<!--	</table:customData>-->
+									<!--	<table:template>-->
+									<!--		<Text id="SGF_Insp_Lottext" text="{SGF_Insp_Lot}"/>-->
+									<!--	</table:template>-->
+									<!--</table:Column>-->
+									<table:Column id="PlantColumn" width="auto" autoResizable="true"  tooltip="{i18n>Plant}" sortProperty="Plant">
+										<Label id="PlantLabel" text="{i18n>Plant}"/>
+										<table:customData>
+											<core:CustomData id="PlantCustom" key="p13nData"  value='\{"columnKey":"Plant","leadingProperty": "Plant","sortProperty":"Plant","columnIndex": "1"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="Planttext" text="{Plant}"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="SGF_Ordercolumn" width="auto" autoResizable="true" tooltip="{i18n>SGF_Order}" sortProperty="SGF_Order">
+										<Label id="SGF_Orderlabel" text="{i18n>SGF_Order}"/>
+										<table:customData>
+											<core:CustomData id="SGF_Ordercustom" key="p13nData"
+												value='\{"columnKey":"SGF_Order","leadingProperty": "SGF_Order","sortProperty":"SGF_Order","columnIndex": "2"}'/>
+										</table:customData>
+										<table:template>
+											<!--<Text id="SGF_Ordertext" text="{SGF_Order}"/>-->
+											<Link id="SGF_Ordertext" text="{SGF_Order}" subtle="true" wrapping="false"></Link>
+										</table:template>
+									</table:Column>
+									<table:Column id="SGF_Prod_ordcolumn" width="auto" autoResizable="true" tooltip="{i18n>SGF_Prod_ord}" sortProperty="SGF_Prod_ord">
+										<Label id="SGF_Prod_ordlabel" text="{i18n>SGF_Prod_ord}"/>
+										<table:customData>
+											<core:CustomData id="SGF_Prod_ordcustom" key="p13nData"
+												value='\{"columnKey":"SGF_Prod_ord","leadingProperty": "SGF_Prod_ord","sortProperty":"SGF_Prod_ord","columnIndex": "3"}'/>
+										</table:customData>
+										<table:template>
+											<Link id="SGF_Prod_ordtext" text="{SGF_Prod_ord}"/>
+										</table:template>
+									</table:Column>
+									
+									<table:Column id="SGF_Prod_Ord_BasicDatecolumn" width="auto" autoResizable="true" tooltip="{i18n>SGF_Prod_Ord_BasicDate}" sortProperty="SGF_Prod_Ord_BasicDate">
+										<Label id="SGF_Prod_Ord_BasicDatelabel" text="{i18n>SGF_Prod_Ord_BasicDate}"/>
+										<table:customData>
+											<core:CustomData id="SGF_Prod_Ord_BasicDatecustom" key="p13nData"
+												value='\{"columnKey":"SGF_Prod_Ord_BasicDate","leadingProperty": "SGF_Prod_Ord_BasicDate","sortProperty":"SGF_Prod_Ord_BasicDate","columnIndex": "4"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="SGF_Prod_Ord_BasicDatetext" text="{SGF_Prod_Ord_BasicDate}"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="SGF_Insp_lotcolumn" autoResizable="true" width="auto" tooltip="{i18n>SGF_Insp_lot}" sortProperty="SGF_Insp_lot">
+										<Label id="SGF_Insp_lotlabel" text="{i18n>SGF_Insp_lot}"/>
+										<table:customData>
+											<core:CustomData id="SGF_Insp_lotcustom" key="p13nData"
+												value='\{"columnKey":"SGF_Insp_lot","leadingProperty": "SGF_Insp_lot","sortProperty":"SGF_Insp_lot","columnIndex": "5"}'/>
+										</table:customData>
+										<table:template>
+											<Link id="SGF_Insp_lottext" text="{SGF_Insp_lot}"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="SGF_MaterialColumn" autoResizable="true"  width="auto" tooltip="{i18n>SGF_Material}" sortProperty="SGF_Material">
+										<Label id="SGF_MaterialLabel" text="{i18n>SGF_Material}"/>
+										<table:customData>
+											<core:CustomData id="SGF_MaterialCustom" key="p13nData"
+												value='\{"columnKey":"SGF_Material","leadingProperty": "SGF_Material","sortProperty":"SGF_Material","columnIndex": "6"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="SGF_Materialtext" text="{SGF_Material}"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="SGF_DescrColumn" autoResizable="true"  width="auto" tooltip="{i18n>SGF_Descr}" sortProperty="SGF_Descr">
+										<Label id="SGF_DescrLabel" text="{i18n>SGF_Descr}"/>
+										<table:customData>
+											<core:CustomData id="SGF_DescrCustom" key="p13nData"
+												value='\{"columnKey":"SGF_Descr","leadingProperty": "SGF_Descr","sortProperty":"SGF_Descr","columnIndex": "7"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="SGF_Descrtext" text="{SGF_Descr}"/>
+										</table:template>
+									</table:Column>
+									
+									<table:Column id="CHEMcolumn" autoResizable="true" width="auto" tooltip="{i18n>CHEM}" sortProperty="ChemDesc">
+										<Label id="CHEMlabel" text="{i18n>CHEM}"/>
+										<table:customData>
+											<core:CustomData id="CHEMcustom" key="p13nData" value='\{"columnKey":"ChemDesc","leadingProperty": "ChemDesc","sortProperty":"ChemDesc","columnIndex": "11"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="CHEMtext" text="{ChemDesc}"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="COAcolumn" autoResizable="true"  width="auto" tooltip="{i18n>COA}" sortProperty="COADesc">
+										<Label id="COAlabel" text="{i18n>COA}"/>
+										<table:customData>
+											<core:CustomData id="COAcustom" key="p13nData" value='\{"columnKey":"COADesc","leadingProperty": "COADesc","sortProperty":"COADesc","columnIndex": "10"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="COAtext" text="{path:'COADesc'}"/>
+												
+										</table:template>
+									</table:Column>
+									<table:Column id="REQcolumn" autoResizable="true"  width="auto" tooltip="{i18n>REQ}" sortProperty="ReqDesc">
+										<Label id="REQlabel" text="{i18n>REQ}"/>
+										<table:customData>
+											<core:CustomData id="REQcustom" key="p13nData" value='\{"columnKey":"ReqDesc","leadingProperty": "ReqDesc","sortProperty":"ReqDesc","columnIndex": "9"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="REQtext" text="{ReqDesc}"/>
+										</table:template>
+									</table:Column>
+									<table:Column id="Cocolumn" autoResizable="true" width="auto" tooltip="{i18n>Code}" sortProperty="Code">
+										<Label id="Codelabel" text="{i18n>Code}"/>
+										<table:customData>
+											<core:CustomData id="Codecustom" key="p13nData" value='\{"columnKey":"Code","leadingProperty": "Code","sortProperty":"Code","columnIndex": "8"}'/>
+										</table:customData>
+										<table:template>
+											<Text id="Codetext" text="{Code}"/>
+										</table:template>
+									</table:Column>
+									
+									
+								</table:columns>
+							</table:Table>
+							<!--<smartTable:layoutData id="idSmartTableLayout">
+								<FlexItemData growFactor="1" baseSize="0%" id="idFid1"/>
+							</smartTable:layoutData>-->
+							<!--<Table  alternateRowColors="true" growingThreshold="20" growing="true" growingScrollToLoad="true"
+							items="{/ComponentCOASet}">
+							<columns>
+								
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Button text="{CHEM}"/>
+									
+										<ObjectIdentifier text="{COA}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>-->
+						</smartTable:SmartTable>
+						<!--tableBindingPath="Coa_tab"-->
+					</VBox>
+				</uxap:blocks>
+			</uxap:ObjectPageSubSection>
+		</uxap:subSections>
+	</uxap:ObjectPageSection>
+</core:FragmentDefinition>
